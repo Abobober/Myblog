@@ -4,5 +4,10 @@
 
     <h1>{{post.title}}</h1>
     <p>{{post.text}}</p>
-
+    {% if post.pub_date %}
+            <div class="date">
+                {{ post.pub_date }}
+            </div>
+        {% endif %}
+    
 {% endblock %}

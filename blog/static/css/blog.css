@@ -1,0 +1,38 @@
+.blog_name1{
+    text-align: center;
+    
+}
+
+.blog_name {
+    font-family:'Lobster';
+    font-size: 50px;
+    color: #fc05cf;
+
+}
+
+body {
+    padding-left: 30px;
+}
+
+h1 a {
+    font-family:'Lobster';
+    font-size: 40px;
+    color: #fc05cf;
+}
+
+h2 {
+    font-family:'Lobster';
+    font-size: 40px;
+    color: #fc05cf;
+}
+
+.post_content {
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: 'Segoe UI';
+}
+
+time {
+    font-size: 12px;
+    font-style: italic;
+}
