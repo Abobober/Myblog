@@ -1,13 +1,18 @@
 {% extends 'blog/base.html' %}
 
 {%block content%}
-
-    <h1>{{post.title}}</h1>
-    <p>{{post.text}}</p>
+    <article class="post">
+    <h1 class="blog_name">{{post.title}}</h1>
+    <p class="post_content">{{post.text}}</p>
+    <br>
     {% if post.pub_date %}
-            <div class="date">
-                {{ post.pub_date }}
+            <div>
+                <p class="pub">{{ post.pub_date }}</p>
             </div>
+    </article>
         {% endif %}
     
+    {% if user.is_authenticated %}    
+        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    {% endif %}
 {% endblock %}

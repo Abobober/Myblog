@@ -6,7 +6,7 @@
   <div class="post">
     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
     <p class="post_conte">{{ post.text|linebreaksbr }}</p>
-    <time>published: {{ post.pub_date }}</time>
+    <time class="pub">published: {{ post.pub_date }}</time>
   </div>
     <hr>
 
