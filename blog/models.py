@@ -1,12 +1,11 @@
 from django.conf import settings
 from django.db import models
-from django.utils import timezone
-
-
+from django.utils import timezone   
+    
 class Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length = 300)
     text = models.TextField()
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     pub_date = models.DateTimeField(default=timezone.now)
 
     def publish(self):
