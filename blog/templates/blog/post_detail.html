@@ -12,8 +12,9 @@
     </article>
         {% endif %}
     
-    {% if user.is_authenticated %}    
+       
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"> Edit </span></a>
-    {% endif %}
+        <a class="btn btn-default" href="{% url 'post_delete' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"> Delete </span></a>
+   
     
 {% endblock %}

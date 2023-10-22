@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
   </head>
     <body>
+      <header>
+        {% include 'blog/navbar.html' %}
+      </header>
     <div class="page-header">
-      {% if user.is_authenticated %}
+      
         <a href="{% url 'post_new' %}" class="top-menu"><button>
          {% include './icons/file-earmark-plus.svg' %} Create
         </button></a>
-      {% endif %}
+      
       <h1><a href="/">Django Girls Blog</a></h1>
     </div>  
     
